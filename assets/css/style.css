@@ -1,0 +1,76 @@
+
+.background{
+    background-image: linear-gradient(black, crimson, blue);   
+}
+
+.topbar{
+    width: 80%;
+    padding: 1rem;
+    color: goldenrod;
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    margin: 2rem auto;
+    background-color: crimson;
+    border-radius: 15px;
+    border: solid 2px;
+}
+
+.container{
+    display: flex;
+    width: 70%;
+    margin: 2rem auto;
+    justify-content: space-between;
+}
+
+.iconholder{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    width: 20%;
+    height: 50vh;
+    border: solid 2px yellow;
+    border-radius: 15px;
+    
+}
+
+.img{
+    max-width: 100%;
+}
+
+.xes{
+    display: flex;
+    flex-direction: column;
+    color: yellow;
+    font-size: 2rem;
+    font-weight: 900;
+    justify-content: center;
+}
+
+.scoreboard{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 2rem auto;
+    color: yellow;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.game-over{
+    height: 40vw;
+    width: 100%;
+    background-color: black;
+    color: crimson;
+    font-size: 2rem;
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-over__text{
+    justify-self: center;
+    align-self: center;
+}

@@ -1,27 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let credits = 100
-    let gameOver = document.querySelector('.container');
-    let displayOne = document.querySelector('#imgone');
-    let displayTwo  = document.querySelector('#imgtwo');
-    let displayThree = document.querySelector('#imgthree')
-    let one;
-    let two;
-    let three;
-    let playGame = document.querySelector('.role');
-    let winner = document.querySelector('.point'); 
-    
-    const slotBar = [
-        {icon: 'appelsin.png', tal: [5, 12], bonus: 50}, 
-        {icon:'bar.png', tal: [0, 4], bonus: 100}, 
-        {icon: 'blomme.png', tal: [13, 19], bonus: 60}, 
-        {icon: 'citron.png', tal: [20, 31], bonus: 30}, 
-        {icon: 'diamant.png', tal: [32, 42], bonus: 30}, 
-        {icon: 'jordbaer.png', tal: [43, 53], bonus: 30}, 
-        {icon: 'kirsebaer.png', tal: [54, 65], bonus: 20}, 
-        {icon: 'klokker.png', tal: [66, 79], bonus: 20}, 
-        {icon: 'melon.png', tal: [80, 90], bonus: 35}, 
-        {icon: 'syv.png', tal: [91, 99], bonus: 40}
-    ]
 
 Rumble();
 barRoll();
@@ -40,6 +17,7 @@ barRoll();
     
     function Rumble(){
         playGame.addEventListener('click', () => {
+            winns.innerHTML = '';
             credits--
             goodToGo();
             barRoll();
@@ -100,12 +78,15 @@ barRoll();
             let wins = bonusArray[0] + amount;
             winner.innerHTML = wins;
             credits += bonusArray[0];
+            winns.innerHTML = bonusArray[0];
+
         } else if (imgArray[0] == imgArray[1]){
             let getWins = winner.innerHTML;
             let amount = parseInt(getWins);
             let wins = 2 + amount
             credits += 2;
             winner.innerHTML =  wins;
+            winns.innerHTML = 2;
         }
     
         let scoreboard = document.querySelector('.score');

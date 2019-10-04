@@ -59,6 +59,10 @@
     font-weight: 900;
 }
 
+.winns{
+    color: orange;
+}
+
 .game-over{
     height: 40vw;
     width: 100%;
